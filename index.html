@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Klein Shell DOS 2.0 Preview</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="desktop">
+    <div class="window">
+      <div class="titlebar">
+        <span>Klein Shell DOS 2.0 - Preview Build</span>
+        <div class="buttons"><span></span><span></span><span></span></div>
+      </div>
+      <div class="toolbar">
+        <button data-theme="green">GREEN</button>
+        <button data-theme="amber">AMBER</button>
+        <button data-theme="blue">BLUE</button>
+        <button id="soundBtn">SOUND: ON</button>
+      </div>
+      <div id="terminal" aria-label="Klein Shell DOS terminal"></div>
+      <form id="commandForm" autocomplete="off">
+        <span id="prompt">C:\></span>
+        <input id="cmd" autofocus spellcheck="false" />
+      </form>
+    </div>
+    <footer>Klein Shell DOS 2.0 Preview • Created by Rodrigo Klein Mariano Canto with Lolita / ChatGPT assistance</footer>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

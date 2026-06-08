@@ -1,0 +1,45 @@
+:root{
+  --bg:#020802; --panel:#081408; --text:#74ff74; --dim:#2fae2f; --border:#35d135; --title:#1b3d1b;
+}
+*{box-sizing:border-box}
+html,body{height:100%; margin:0; background:#111; font-family:"Courier New", monospace;}
+#desktop{
+  min-height:100%; padding:18px; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  background:
+    radial-gradient(circle at 25% 10%, rgba(255,255,255,.05), transparent 30%),
+    linear-gradient(135deg, #202020, #030303);
+}
+.window{
+  width:min(980px, 96vw); height:min(700px, 86vh); border:3px ridge #bdbdbd; background:#c0c0c0;
+  box-shadow:0 20px 60px rgba(0,0,0,.65);
+  display:flex; flex-direction:column;
+}
+.titlebar{
+  height:32px; display:flex; align-items:center; justify-content:space-between; padding:0 8px;
+  color:white; background:linear-gradient(90deg,#000080,#1084d0); font-weight:bold;
+}
+.buttons{display:flex; gap:5px}.buttons span{width:16px;height:16px;border:2px outset #eee;background:#c0c0c0;display:inline-block}
+.toolbar{padding:6px; border-bottom:2px inset #eee; display:flex; gap:6px; flex-wrap:wrap}
+button{font-family:inherit; border:2px outset #eee; background:#d6d6d6; padding:4px 10px; cursor:pointer}
+button:active{border-style:inset}
+#terminal{
+  flex:1; overflow:auto; padding:14px; color:var(--text); background:var(--bg); border:3px inset #888;
+  line-height:1.35; text-shadow:0 0 6px color-mix(in srgb, var(--text) 60%, transparent);
+  white-space:pre-wrap;
+}
+#terminal::before{
+  content:""; position:absolute; pointer-events:none;
+}
+.line{margin:0 0 2px}.sys{color:var(--text)}.dim{color:var(--dim)}.warn{color:#ff7070}.ok{color:#b8ffb8}.cmdline{color:#fff}
+#commandForm{
+  display:flex; align-items:center; padding:8px; gap:8px; background:var(--panel); border-top:2px solid var(--border); color:var(--text);
+}
+#prompt{white-space:nowrap}
+#cmd{
+  flex:1; background:transparent; border:0; outline:0; color:var(--text);
+  font:inherit; caret-color:var(--text); text-transform:none;
+}
+footer{color:#aaa; margin-top:8px; font-size:12px; text-align:center}
+body.amber{--bg:#100900;--panel:#1c1000;--text:#ffbf4a;--dim:#b8791e;--border:#d98d20}
+body.blue{--bg:#020818;--panel:#06122b;--text:#76d7ff;--dim:#2a87b4;--border:#39a6d6}
+@media(max-width:650px){#desktop{padding:6px}.window{height:92vh}.toolbar button{font-size:12px;padding:3px 6px}}
